@@ -10,6 +10,5 @@ class StridePrefetcherIO(M: Int, N: Int) extends Bundle {
 
   val out = Output(Vec(M * N, SInt(32.W)))
 
-  override def cloneType =
-    new StridePrefetcherIO(M, N).asInstanceOf[this.type]
+  override def cloneType = new StridePrefetcherIO(M, N).asInstanceOf[this.type]
 }
